@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trail Notes & Optional Supplies — June Lake Base Camp</title>
+<style>
+  :root{
+    --paper:#F1EEE4;--paper-2:#E8E4D6;--ink:#23302B;--ink-soft:#4C594F;
+    --pine:#2F5D50;--pine-deep:#1C2D27;--blaze:#D9822B;--lake:#2C6E8F;
+    --line:#BDB6A4;--line-soft:#D5CFBF;--star:#B8632A;--maxw:900px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:16.5px;line-height:1.58;-webkit-font-smoothing:antialiased}
+  .sign{font-family:"Helvetica Neue",Arial,"Segoe UI",system-ui,sans-serif;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+  a{color:var(--lake);word-break:break-word}
+
+  header.hero{position:relative;background:var(--pine-deep);color:#F1EEE4;overflow:hidden;border-bottom:6px solid var(--blaze)}
+  .contour{position:absolute;inset:0;pointer-events:none;opacity:.16;z-index:0}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:40px 20px 32px;position:relative;z-index:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;letter-spacing:.2em;color:var(--blaze)}
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--blaze);display:inline-block}
+  h1.title{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;line-height:1.03;
+    font-size:clamp(1.8rem,5vw,2.8rem);margin:.3em 0 .2em;text-transform:uppercase}
+  .sub{color:#D8D2C2;max-width:60ch;margin:0}
+  .stamp{margin-top:18px;font-size:.74rem;color:#A9C3B9;font-family:"Helvetica Neue",Arial,sans-serif;letter-spacing:.04em}
+
+  section{padding:30px 0 6px;border-bottom:1px solid var(--line-soft)}
+  .sec-head{display:flex;align-items:baseline;gap:13px;margin-bottom:4px}
+  .sec-num{font-size:.74rem;letter-spacing:.18em;color:var(--blaze)}
+  h2{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.03em;
+    font-size:clamp(1.2rem,3vw,1.55rem);margin:0;color:var(--pine)}
+  .lead{color:var(--ink-soft);max-width:64ch;margin:.3em 0 16px}
+
+  .note{display:flex;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;margin:0 0 14px}
+  .note .ic{font-size:1.3rem;line-height:1.2;flex:none}
+  .note h3{margin:0 0 3px;font-size:1.02rem}
+  .note p{margin:0;color:var(--ink-soft);font-size:.95rem}
+  .note.warn{border-color:var(--blaze);background:#FBF4E7}
+  .note.warn .ic{color:var(--blaze)}
+
+  .callout{background:var(--pine-deep);color:#EDEAE0;border-radius:13px;padding:20px 22px;margin:6px 0 16px}
+  .callout .sign{color:var(--blaze);font-size:.72rem;display:block;margin-bottom:7px}
+  .callout p{margin:0 0 8px}
+  .callout .q{font-size:1.08rem;line-height:1.45}
+  .callout a{color:#9FD0C2}
+
+  ul.supply{list-style:none;margin:8px 0 0;padding:0}
+  li.sup{display:flex;align-items:flex-start;gap:12px;padding:11px 4px;border-bottom:1px solid var(--line-soft)}
+  li.sup:last-child{border-bottom:none}
+  li.sup input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--pine)}
+  .sup-body{flex:1}
+  .sup-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px}
+  .sup-name{font-weight:600}
+  .tag{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:30px;white-space:nowrap}
+  .tag.must{background:var(--blaze);color:#221a0e}
+  .tag.cond{background:var(--lake);color:#fff}
+  .tag.nice{background:transparent;color:var(--ink-soft);border:1px solid var(--line)}
+  .sup-why{display:block;color:var(--ink-soft);font-size:.9rem;margin-top:2px}
+
+  ol.src{margin:6px 0 0;padding-left:20px;font-size:.9rem;color:var(--ink-soft)}
+  ol.src li{margin-bottom:8px}
+  ol.src a{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.84rem}
+
+  footer{background:var(--pine-deep);color:#CDD6D0;padding:22px 0;font-size:.82rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  footer .sign{color:#F1EEE4}
+
+  @media print{
+    body{background:#fff;color:#000;font-size:10.5pt}
+    header.hero{background:#fff;color:#000;border-bottom:3px solid #000}
+    .hero-inner{padding:6px 0}.eyebrow,.eyebrow::before{color:#000;background:#000}
+    h1.title,.sub,.stamp{color:#000}
+    .contour{display:none}
+    .note,.callout{background:#fff;color:#000;border:1px solid #000;break-inside:avoid}
+    .callout .sign{color:#000}.callout a,a{color:#000}
+    .head h2,h2{color:#000}
+    .tag{background:#fff !important;color:#000 !important;border:1px solid #000}
+    li.sup input{-webkit-appearance:none;appearance:none;border:1.5px solid #000;border-radius:3px;background:#fff}
+    section,li.sup{break-inside:avoid}
+    footer{background:#fff;color:#000;border-top:1px solid #000}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="contour" viewBox="0 0 1000 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#F1EEE4" stroke-width="1.5">
+      <path d="M-50,210 C150,175 250,235 450,195 C650,155 800,215 1050,175"/>
+      <path d="M-50,170 C150,140 250,200 450,160 C650,120 800,180 1050,140"/>
+      <path d="M-50,130 C170,105 260,165 460,125 C660,90 810,145 1050,110"/>
+      <path d="M-50,90 C180,75 270,120 470,90 C670,65 820,110 1050,85"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <span class="eyebrow sign">June Lake Base Camp &middot; Supplemental</span>
+    <h1 class="title">Trail Notes &amp;<br>Optional Supplies</h1>
+    <p class="sub">Conditions, terrain cautions, and a short list of optional gear for the Friday loop &mdash; for the leader to review and pass along or fold in as he sees fit.</p>
+    <p class="stamp">Compiled mid-June 2026 from current Forest Service and trail sources (see Sources). Conditions change &mdash; reconfirm the week of the trip.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===== TRAIL NOTES ===== -->
+  <section>
+    <div class="sec-head"><span class="sec-num sign">01 / Conditions</span></div>
+    <h2>Trail Notes</h2>
+    <p class="lead">The Friday loop between June Lake and Ape Canyon climbs into the higher, exposed blast zone. Most of these are about terrain and timing rather than gear.</p>
+
+    <div class="note">
+      <span class="ic">&#9989;</span>
+      <div><h3>Access is open</h3><p>The south-side roads and trailheads are open for the season, and Ape Cave has been on timed-ticket entry since May 22, 2026.</p></div>
+    </div>
+
+    <div class="note warn">
+      <span class="ic">&#10052;</span>
+      <div><h3>Possible lingering snow up high</h3><p>High-elevation trails here typically melt out by mid-July, and snow can persist on north-facing slopes &mdash; exactly where the upper Loowit and Plains of Abraham run. Check the Swift Creek SNOTEL and the forecast the week of, and be ready for snow-covered stretches where the tread disappears.</p></div>
+    </div>
+
+    <div class="note warn">
+      <span class="ic">&#9888;</span>
+      <div><h3>Two washed-out gorge crossings &mdash; the crux</h3><p>Between June Lake and Ape Canyon the Loowit crosses steep, washed-out ravines with loose rock that are difficult and potentially dangerous to scramble through. This is the most technical part of Friday: slow the pace, space people out, and spot the younger scouts. Trekking poles help a lot here.</p></div>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#129517;</span>
+      <div><h3>Route-finding across the lava</h3><p>Where the trail crosses lava flows and pumice, it's marked by posts and cairns and is easy to lose &mdash; parties report wandering off course. Have folks download offline maps (Gaia / AllTrails / CalTopo) in addition to the paper maps, compass, and GPS, and follow the posts.</p></div>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#128167;</span>
+      <div><h3>Water: top off at June Lake</h3><p>June Lake is the reliable source. Beyond it expect very little &mdash; reports note only a trickle near the Ape Canyon junction, and snowmelt creeks are unreliable. Fill to full capacity at the lake before heading out (the addendum's 3 L youth / 4 L adult call is right for this).</p></div>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#9728;</span>
+      <div><h3>Exposed, sunny, and sometimes windy</h3><p>Once in the blast zone there's no shade, and the Plains of Abraham can get windy. The early Friday start beats the heat <em>and</em> means crossing snowmelt creeks before afternoon flows peak. Sun protection and a wind layer (the rain shell works) earn their place.</p></div>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#129718;</span>
+      <div><h3>It's dusty</h3><p>The boulder and pumice sections are slow and very dusty. The bandana already on the packing list doubles as a dust mask; sunglasses help here too.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== APE CAVE ===== -->
+  <section>
+    <div class="sec-head"><span class="sec-num sign">02 / Ape Cave</span></div>
+    <h2>Ape Cave Notes</h2>
+    <p class="lead">A few specifics for the Thursday cave stop.</p>
+
+    <div class="callout">
+      <span class="sign">Official requirement &mdash; two lights per person</span>
+      <p class="q">The Gifford Pinchot National Forest requires each visitor to bring <strong>two sources of light</strong> to explore Ape Cave, and notes that a cell-phone light is not bright enough.</p>
+      <p style="font-size:.85rem;margin-top:10px">Source: U.S. Forest Service, Ape Cave Interpretive Site &mdash;<br><a href="https://www.fs.usda.gov/r06/giffordpinchot/recreation/ape-cave-interpretive-site">fs.usda.gov/r06/giffordpinchot/recreation/ape-cave-interpretive-site</a></p>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#127777;</span>
+      <div><h3>Cold and pitch black</h3><p>The cave holds a constant 42&deg;F year-round and is completely dark, so an insulation layer (already on the list) and sturdy shoes are worth having on hand. Lanterns can be rented at Ape Headquarters (9 AM&ndash;5 PM) if needed.</p></div>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#127903;</span>
+      <div><h3>Timed entry &amp; cave rules</h3><p>Arrive at the start of your reserved two-hour window. Inside the cave, food and drinks (except water), pets, and fires are not allowed. The Lower Cave is the easy family route (~1 hr); the Upper Cave adds an 8-ft rock-wall scramble and takes 2+ hrs.</p></div>
+    </div>
+
+    <div class="note">
+      <span class="ic">&#128663;</span>
+      <div><h3>Passes &amp; parking</h3><p>Ape Cave day-use is $5/vehicle (or a Northwest Forest / Interagency Pass) plus the timed reservation. The June Lake Trailhead and Marble Mountain Sno-Park are free in summer (the Sno-Park pass is winter-only). Worth confirming whether the Lava Canyon / Ape Canyon lot wants a Northwest Forest Pass.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== OPTIONAL SUPPLIES ===== -->
+  <section>
+    <div class="sec-head"><span class="sec-num sign">03 / Gear</span></div>
+    <h2>Optional Supply List</h2>
+    <p class="lead">Not on the master checklist, but worth considering for this route. Tags: <span class="tag must">Recommended</span> <span class="tag cond">If snow</span> <span class="tag nice">Nice to have</span></p>
+    <ul class="supply">
+      <li class="sup"><input type="checkbox"><div class="sup-body"><div class="sup-top"><span class="sup-name">Trekking poles &mdash; per person</span><span class="tag must">Recommended</span></div><span class="sup-why">Big help across the washed-out ravines and the loose lava flows, plus any snow and the boulder scrambles.</span></div></li>
+      <li class="sup"><input type="checkbox"><div class="sup-body"><div class="sup-top"><span class="sup-name">Backup light + spare batteries &mdash; per person</span><span class="tag must">Recommended</span></div><span class="sup-why">Meets the Forest Service two-lights-per-person rule for Ape Cave alongside the headlamp already on the list.</span></div></li>
+      <li class="sup"><input type="checkbox"><div class="sup-body"><div class="sup-top"><span class="sup-name">Microspikes / light traction</span><span class="tag cond">If snow</span></div><span class="sup-why">Only if the SNOTEL/forecast shows lingering snowfields on the upper Loowit or Plains of Abraham. Skip if it's melted out.</span></div></li>
+      <li class="sup"><input type="checkbox"><div class="sup-body"><div class="sup-top"><span class="sup-name">Blister kit (leukotape or moleskin)</span><span class="tag nice">Nice to have</span></div><span class="sup-why">A 10+ mile day on loose rock is hard on feet; cheap insurance beyond the basic first-aid kit.</span></div></li>
+      <li class="sup"><input type="checkbox"><div class="sup-body"><div class="sup-top"><span class="sup-name">Electrolyte tabs or drink mix</span><span class="tag nice">Nice to have</span></div><span class="sup-why">Hot, exposed, sweaty day &mdash; pairs with the 1 L flavored-drink bottle already planned.</span></div></li>
+      <li class="sup"><input type="checkbox"><div class="sup-body"><div class="sup-top"><span class="sup-name">Whistle &mdash; per scout</span><span class="tag nice">Nice to have</span></div><span class="sup-why">Simple safety item for an exposed, split-group day; many packs already have one on the sternum strap.</span></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== SOURCES ===== -->
+  <section>
+    <div class="sec-head"><span class="sec-num sign">04 / Verify</span></div>
+    <h2>Sources</h2>
+    <p class="lead">For the leader to check or share. Reconfirm the week of the trip &mdash; conditions and closures change.</p>
+    <ol class="src">
+      <li>U.S. Forest Service &mdash; Ape Cave Interpretive Site (two-lights requirement, rules, passes): <a href="https://www.fs.usda.gov/r06/giffordpinchot/recreation/ape-cave-interpretive-site">fs.usda.gov/r06/giffordpinchot/recreation/ape-cave-interpretive-site</a></li>
+      <li>U.S. Forest Service &mdash; June Lake Trail #216B (snow melt-out, washouts, water, mosquitoes): <a href="https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-216b-june-lake">fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-216b-june-lake</a></li>
+      <li>Mount St. Helens Institute &mdash; Current Conditions (south-side openings): <a href="https://www.mshinstitute.org/current-conditions">mshinstitute.org/current-conditions</a></li>
+      <li>Washington Trails Association &mdash; Loowit Trail (washed-out ravine crossings): <a href="https://www.wta.org/go-hiking/hikes/loowit">wta.org/go-hiking/hikes/loowit</a></li>
+      <li>Ape Cave timed reservations: <a href="https://www.recreation.gov/timed-entry/10086990">recreation.gov/timed-entry/10086990</a></li>
+      <li>Mt. St. Helens snow depth (Swift Creek SNOTEL): <a href="https://cascade-snow.com/sthelens">cascade-snow.com/sthelens</a></li>
+    </ol>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="sign">June Lake Base Camp &middot; Trail Notes</span>
+    <span>Supplemental to the trip plan &amp; packing checklist &mdash; review before sharing.</span>
+  </div>
+</footer>
+
+</body>
+</html>
